@@ -15,12 +15,18 @@ function removeFromPochList(bookId) {
         displayPochList();
     }
 
-    // Rafraîchir les résultats de recherche pour reconfigurer les icônes
-    if (window.lastSearchResults && typeof displayResults === "function") {
+    // Rafraîchir les résultats uniquement si le formulaire de recherche est visible
+    const searchFormContainer = document.getElementById("searchForm");
+    if (
+        searchFormContainer &&
+        searchFormContainer.style.display !== "none" &&
+        window.lastSearchResults &&
+        typeof displayResults === "function"
+    ) {
         displayResults(window.lastSearchResults);
     }
 
-    // Optionnel : afficher un toast de confirmation
+    // Afficher un toast de confirmation
     if (typeof showToast === "function") {
         showToast("Livre supprimé de Ma Poch'Liste.");
     }
