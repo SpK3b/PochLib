@@ -49,26 +49,9 @@ Utilisez Live Server pour lancer un serveur de développement local.
 
 Si vous utilisez des fichiers SCSS, lancez le Live Sass Compiler pour générer automatiquement le fichier CSS.
 
-#### Structure du Projet
-graphql
-Copier
-pochlib/
-├── css/
-│   └── style.scss          # Fichier SCSS principal (compilé en style.css)
-├── js/
-│   ├── index.js            # Initialisation et gestion du bouton "Ajouter un livre"
-│   ├── showForm.js         # Affichage dynamique du formulaire de recherche
-│   ├── searchBooks.js      # Requête vers l'API Google Books
-│   ├── displayResults.js   # Affichage des résultats de recherche
-│   ├── togglePochList.js   # Gestion de l'ajout des livres à la Poch'Liste
-│   ├── displayPochList.js  # Affichage de "Ma Poch'Liste"
-│   ├── removeFromPochList.js  # Suppression d'un livre de la Poch'Liste
-│   └── showToast.js        # Affichage des notifications toast
-├── logo/                   # Contient les icônes (bookmark.svg, bookmark-gray.svg, trash.svg, unavailable.png, etc.)
-├── index.html              # Fichier HTML principal
-└── README.md               # Documentation du projet
 
-##### Utilisation
+#### Utilisation
+
 1. **Recherche :**
 
 - Cliquez sur le bouton "Ajouter un livre" pour afficher le formulaire de recherche.
@@ -91,7 +74,8 @@ pochlib/
 
 - Des notifications toast apparaissent pour confirmer l'ajout ou la suppression d'un livre.
 
-###### Dépendances
+##### Dépendances
+
 - Google Books API : Utilisée pour la recherche de livres.
 - SessionStorage : Pour stocker la Poch'Liste côté client.
 - SASS/SCSS : Pour une gestion optimisée du CSS (optionnel).
