@@ -6,6 +6,7 @@ async function searchBooks(title, author) {
         if (!response.ok) throw new Error('Erreur lors de la récupération des données.');
 
         const data = await response.json();
+        console.log(data.items);
         displayResults(data.items);
     } catch (error) {
         console.error(error);
