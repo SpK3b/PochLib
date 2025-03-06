@@ -50,7 +50,7 @@ Utilisez Live Server pour lancer un serveur de développement local.
 Si vous utilisez des fichiers SCSS, lancez le Live Sass Compiler pour générer automatiquement le fichier CSS.
 
 
-#### Utilisation
+### Utilisation
 
 1. **Recherche :**
 
@@ -74,7 +74,7 @@ Si vous utilisez des fichiers SCSS, lancez le Live Sass Compiler pour générer 
 
 - Des notifications toast apparaissent pour confirmer l'ajout ou la suppression d'un livre.
 
-##### Dépendances
+### Dépendances
 
 - Google Books API : Utilisée pour la recherche de livres.
 - SessionStorage : Pour stocker la Poch'Liste côté client.
