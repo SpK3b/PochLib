@@ -55,8 +55,8 @@ body {
 /* ========== Conteneur des résultats ========== */
 #resultsContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
 }
@@ -64,7 +64,8 @@ body {
 /* ========== Style des cartes de livre ========== */
 .book-item {
   position: relative;
-  width: 60%;
+  width: 100%;
+  /* Par défaut, une colonne */
   max-width: 400px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -242,10 +243,36 @@ body {
   filter: invert(53%) sepia(81%) saturate(547%) hue-rotate(360deg) brightness(95%) contrast(99%);
 }
 
-/* ========== Responsive pour mobile ========== */
-@media screen and (max-width: 600px) {
-  .book-item,
-  .poch-item {
+/* ========== Responsive Design ========== */
+/* 🖥️ Ordinateur (1 colonne en vertical) */
+@media screen and (min-width: 1024px) {
+  #resultsContainer {
+    flex-direction: row;
+    align-items: center;
+  }
+  .book-item {
+    width: 60%;
+  }
+}
+/* 📱 Tablette (2 colonnes) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #resultsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .book-item {
+    width: 45%;
+    max-width: 350px;
+  }
+}
+/* 📱 Mobile (1 colonne) */
+@media screen and (max-width: 767px) {
+  #resultsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .book-item {
     width: 90%;
   }
 }/*# sourceMappingURL=style.css.map */
