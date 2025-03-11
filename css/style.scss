@@ -259,7 +259,7 @@ body {
 
 /* ========== Responsive Design ========== */
 
-/* 🖥️ Ordinateur (1 colonne en vertical) */
+/* Ordinateur (1 colonne en horizontal) */
 @media screen and (min-width: 1024px) {
     #resultsContainer {
         flex-direction: row;
@@ -271,7 +271,7 @@ body {
     }
 }
 
-/* 📱 Tablette (2 colonnes) */
+/* Tablette (2 colonnes) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #resultsContainer {
         flex-direction: row;
@@ -285,7 +285,7 @@ body {
     }
 }
 
-/* 📱 Mobile (1 colonne) */
+/* Mobile (1 colonne) */
 @media screen and (max-width: 767px) {
     #resultsContainer {
         flex-direction: column;
